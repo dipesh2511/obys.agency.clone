@@ -462,10 +462,77 @@ body {
 
 /* page 5 started here */
 #page5 {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
 }
 
+#page5 div {
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+    margin-top: -2.2vw;
+}
+
+#page5 div h1 {
+    font-size: 7vw;
+    white-space: nowrap;
+    display: inline-block;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+#page5 .elem h1,
+#page5 .elem2 h1 {
+    font-family: 'Plain-Light', serif;
+}
+
+#page5 .elem h1 span,
+#page5 .elem2 h1 span {
+    font-family: 'Silk Serif Light Italic', serif;
+}
+
+.elem h1{
+    animation: elemanimeforward 15s linear infinite forwards;
+}
+
+.elem2 h1{
+    animation: elemanimebackward 18s linear infinite forwards;
+}
+
+@keyframes elemanimeforward {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+@keyframes elemanimebackward {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+
 /* page 5 ended here  */
+
+/* footer started here */
+#footer {
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* footer ended here  */
 
 /* Main ended */
