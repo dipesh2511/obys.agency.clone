@@ -60,7 +60,7 @@ body {
     border: 1px solid var(--text-colour);
     /* background-color: var(--text-colour); */
     pointer-events: none;
-    z-index: 5;
+    z-index: 1;
     top: 0;
     left: 0;
     transform: translate(-50%, -50%);
@@ -275,6 +275,7 @@ body {
 }
 
 #video-container video {
+    position: relative;
     width: 99%;
     height: 99%;
     object-fit: cover;
