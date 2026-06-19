@@ -320,7 +320,7 @@ body {
 /* page 3 started here  */
 
 #page3 {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     /* background-color: lightgray; */
 }
@@ -330,7 +330,6 @@ body {
 /* page 4 started here  */
 
 #page4 {
-    height: auto;
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -497,11 +496,11 @@ body {
     font-family: 'Silk Serif Light Italic', serif;
 }
 
-.elem h1{
+.elem h1 {
     animation: elemanimeforward 15s linear infinite forwards;
 }
 
-.elem2 h1{
+.elem2 h1 {
     animation: elemanimebackward 18s linear infinite forwards;
 }
 
@@ -514,6 +513,7 @@ body {
         transform: translateX(-100%);
     }
 }
+
 @keyframes elemanimebackward {
     from {
         transform: translateX(-100%);
@@ -529,8 +529,106 @@ body {
 
 /* footer started here */
 #footer {
-    min-height: 100vh;
+    height: 70vh;
     width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: top;
+    position: relative;
+    padding-bottom: 2.5vh;
+    margin-top: -20vh;
+}
+
+#footer-content {
+    /* height: 60vh; */
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#footer-content div {
+    height: fit-content;
+    margin-top: 10vh;
+}
+
+#footer-content div h1 {
+    position: relative;
+    font-size: 7.5vw;
+    font-weight: 600;
+    font-family: 'Plain-Light', serif;
+    text-transform: uppercase;
+    line-height: 1;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    width: 100%;
+}
+
+#footer-content div h1::before {
+    content: '04';
+    position: absolute;
+    left: -10%;
+    font-size: 3vw;
+    font-weight: 50;
+    font-family: 'Silk Serif', serif;
+}
+
+#footer-content .underline {
+    display: inline-block;
+    border-bottom: 1px solid white;
+    cursor: pointer;
+}
+
+#social-address-sayhi {
+    display: flex;
+    justify-content: start;
+    gap: 10vw;
+    width: 100%;
+    margin-top: 4vw;
+}
+
+#social-address-sayhi>div {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw;
+    width: 15%;
+    margin: 0;
+}
+
+#social-address-sayhi>div>div {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+#social-address-sayhi h5 {
+    font-size: 1vw;
+    font-weight: 200;
+    font-family: 'Plain-Light', serif;
+    text-transform: uppercase;
+}
+
+#social-address-sayhi h3 {
+    font-size: 1.4vw;
+    font-weight: 400;
+    font-family: var(--font-base);
+    line-height: 1.4;
+    max-width: 22vw;
+}
+
+#social-address-sayhi h3:last-child {
+    max-width: none;
+}
+
+
+#footer-content div h5 {
+    font-size: 1vw;
+    font-weight: 200;
+    font-family: 'Plain-Light', serif;
+    text-transform: uppercase;
+    margin-bottom: 2vh;
 }
 
 /* footer ended here  */
