@@ -8,5 +8,16 @@ videoPlayBtn.addEventListener('click', () => {
     playbtnflag = !playbtnflag;
     videoOverlay.style.display = playbtnflag ? 'none' : 'block';
     playIcon.textContent = playbtnflag ? 'pause' : 'play_arrow';
+    if (playIcon.textContent == 'pause') {
+        gsap.to(videoPlayBtn, {
+            scale: .4,
+            duration: .5
+        })
+    } else {
+        gsap.to(videoPlayBtn, {
+            scale: 1,
+            duration: .5
+        })
+    }
 });
 
