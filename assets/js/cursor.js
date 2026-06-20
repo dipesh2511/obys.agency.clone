@@ -34,3 +34,24 @@ document.querySelectorAll("#nav-links h5").forEach((link) => {
         });
     });
 });
+
+// Hide Cursor Over Video Container
+const videoContainer = document.querySelector("#video-container");
+
+if (videoContainer) {
+    videoContainer.addEventListener("mouseenter", () => {
+        gsap.to(cursor, {
+            opacity: 0,
+            duration: 0.2,
+            ease: "power2.out"
+        });
+    });
+
+    videoContainer.addEventListener("mouseleave", () => {
+        gsap.to(cursor, {
+            opacity: 1,
+            duration: 0.2,
+            ease: "power2.out"
+        });
+    });
+}
