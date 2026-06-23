@@ -405,7 +405,8 @@ html::-webkit-scrollbar {
 
 .page3-image-container:nth-child(1) {
     width: 22%;
-    /* not 30% */
+    height: 60vh;
+    /* explicit height, not just min-height */
     min-height: 45vh;
     box-sizing: border-box;
     margin-right: 1.5%;
@@ -413,33 +414,37 @@ html::-webkit-scrollbar {
 }
 
 .page3-circle {
-    width: 32%;
+    width: 30%;
     /* not 30% */
     min-height: 85vh;
     box-sizing: border-box;
     position: relative;
 }
 
-#page3-main-content>div>img:nth-child(1) {
-    height: 100%;
-    width: 100%;
-    z-index: 5;
+#page3-main-content>.page3-image-container>img {
+    display: block;
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: cover !important;
     position: relative;
+    z-index: 5;
 }
 
-#page3-main-content>div:nth-child(1)>img:nth-child(1) {
-    height: 70%;
-    width: 100%;
+.page3-first-container>img.page3-first-image {
+    height: 80% !important;
+    width: 100% !important;
+    object-fit: cover !important;
 }
 
-#page3-main-content>div>img:nth-child(2) {
-    display: none;
-    z-index: 5;
-    position: relative;
+#page3-main-content>.page3-image-container>img:nth-of-type(2) {
+    display: none !important;
 }
-#page3-main-content>div:nth-child(1)>img:nth-child(2) {
-    height: 70% !important;
-    width: 100%;
+
+#page3-main-content>.page3-first-container>img.page3-first-image {
+    height: 80% !important;
+    width: 100% !important;
+    object-fit: cover !important;
 }
 
 /* page 3 ended here  */
