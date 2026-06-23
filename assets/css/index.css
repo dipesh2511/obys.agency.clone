@@ -50,7 +50,8 @@ body {
 }
 
 html::-webkit-scrollbar {
-  width: 12px;               /* Width of the entire scrollbar */
+    width: 12px;
+    /* Width of the entire scrollbar */
 }
 
 /* General ended */
@@ -278,7 +279,7 @@ html::-webkit-scrollbar {
     width: 71vw;
     padding-right: 1vw;
     position: relative;
-    z-index :3;
+    z-index: 3;
 }
 
 #video-container video {
@@ -287,7 +288,7 @@ html::-webkit-scrollbar {
     height: 99%;
     object-fit: cover;
     display: block;
-    z-index :2;
+    z-index: 2;
 }
 
 #video-overlay {
@@ -342,10 +343,11 @@ html::-webkit-scrollbar {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 6vw;
+    gap: 4vw;
+    margin: auto;
 }
 
-#page3-content div:nth-child(1) {
+#page3-content>div:nth-child(1) {
     left: 28%;
     position: relative;
     width: 70%;
@@ -382,6 +384,62 @@ html::-webkit-scrollbar {
     left: 28%;
     position: relative;
 
+}
+
+#page3-main-content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 3.5%;
+    position: relative;
+}
+
+.page3-image-container {
+    width: 32%;
+    /* not 30% */
+    min-height: 85vh;
+    box-sizing: border-box;
+    padding: 1vh;
+    position: relative;
+    margin: 1%;
+}
+
+.page3-image-container:nth-child(1) {
+    width: 22%;
+    /* not 30% */
+    min-height: 45vh;
+    box-sizing: border-box;
+    margin-right: 1.5%;
+    position: relative;
+}
+
+.page3-circle {
+    width: 32%;
+    /* not 30% */
+    min-height: 85vh;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#page3-main-content>div>img:nth-child(1) {
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+    position: relative;
+}
+
+#page3-main-content>div:nth-child(1)>img:nth-child(1) {
+    height: 70%;
+    width: 100%;
+}
+
+#page3-main-content>div>img:nth-child(2) {
+    display: none;
+    z-index: 5;
+    position: relative;
+}
+#page3-main-content>div:nth-child(1)>img:nth-child(2) {
+    height: 70% !important;
+    width: 100%;
 }
 
 /* page 3 ended here  */
